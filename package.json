@@ -1,0 +1,23 @@
+{
+  "name": "coatify",
+  "version": "0.1.0",
+  "description": "browserify plugin for mithril-coat templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dailymuse/coatify.git"
+  },
+  "author": "The Muse <shlomo@themuse.com> (https://www.themuse.com/)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/dailymuse/coatify/issues"
+  },
+  "homepage": "https://github.com/dailymuse/coatify",
+  "dependencies": {
+    "mithril-coat": "^0.1.5",
+    "through": "^2.3.7"
+  }
+}
