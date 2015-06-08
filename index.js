@@ -17,10 +17,15 @@ function coatify(file) {
 
     function end () {
         coat.compile(data, {}, function(error, compiledTemplate) {
+            var template = "";
+
             if (error) {
-                this.emit("error", error);
-            }
-            stream.queue(compiledTemplate);
+                stream.emit("error", error);
+            } 
+
+            template = "module.exports = function(view, state) { return " + compiledTemplate + " };"
+
+            stream.queue(template);
             stream.queue(null);
         });
     }
