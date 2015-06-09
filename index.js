@@ -16,14 +16,14 @@ function coatify(file) {
     }
 
     function end () {
-        coat.compile(data, {}, function(error, compiledTemplate) {
+        coat.compile(data, { wrapFunction: true }, function(error, compiledTemplate) {
             var template = "";
 
             if (error) {
                 stream.emit("error", error);
             } 
 
-            template = "module.exports = function(view, state) { return " + compiledTemplate + " };"
+            template = "module.exports = " + compiledTemplate + " ;"
 
             stream.queue(template);
             stream.queue(null);
